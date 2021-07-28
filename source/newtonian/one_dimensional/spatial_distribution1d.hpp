@@ -40,6 +40,15 @@ public:
   double operator()(double x) const;
 };
 
+class PowerLaw: public SpatialDistribution1D
+{
+
+public:
+explicit PowerLaw();
+double operator()(double x) const;
+};
+
+
 //! \brief Step distribution
 class Step: public SpatialDistribution1D
 {
