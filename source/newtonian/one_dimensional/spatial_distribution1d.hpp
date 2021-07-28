@@ -40,12 +40,23 @@ public:
   double operator()(double x) const;
 };
 
+//! \brief Power law distribution
 class PowerLaw: public SpatialDistribution1D
 {
+private:
+
+  double _prefactor
+
+  double _index
 
 public:
-explicit PowerLaw();
-double operator()(double x) const;
+ /*! \brief Class constructor
+    \param prefactor 
+    \param index Power law index
+   */
+  explicit PowerLaw(double prefactor, double index);
+  
+  double operator()(double x) const;
 };
 
 
